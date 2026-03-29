@@ -4351,32 +4351,7 @@ const CITY_QUESTIONS = {
       },
     ]
   },
-
-  // 默认题库（如果某个城市没有专属题目）
-  'DEFAULT': {
-    '普通': [
-      {
-        question: '这座城市位于中国吗？',
-        options: ['A. 是', 'B. 否', 'C. 不确定', 'D. 以上都不对'],
-        answer: 'A'
-      }
-    ],
-    '进阶': [
-      {
-        question: '城市发展的重要因素不包括？',
-        options: ['A. 地理位置', 'B. 交通条件', 'C. 星座运势', 'D. 经济基础'],
-        answer: 'C'
-      }
-    ],
-    '挑战': [
-      {
-        question: '中国目前有多少个省级行政区（含直辖市、自治区、特别行政区）？',
-        options: ['A. 31个', 'B. 32个', 'C. 33个', 'D. 34个'],
-        answer: 'D'
-      }
-    ]
-  }
-};
+}
 
 /**
  * 获取指定城市和难度的随机题目
@@ -4402,6 +4377,3 @@ function getCityQuestion(cityName, difficulty) {
 function hasCityQuestions(cityName) {
   return CITY_QUESTIONS.hasOwnProperty(cityName) && cityName !== 'DEFAULT';
 }
-
-// ES6 导出
-export { CITY_QUESTIONS, getCityQuestion, hasCityQuestions };
